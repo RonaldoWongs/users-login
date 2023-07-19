@@ -1,0 +1,324 @@
+body {
+  background-image: url(https://globalendar.com/wp-content/uploads/2023/04/fondos-de-pantalla-anime-4k-1-1-scaled.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+.Title {
+  color: #fdfdfd;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  width: 45%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+
+.input-container.checkbox label {
+  display: inline-block;
+}
+
+
+.user-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ListContainer {
+  width: 250px;
+  height: 350px;
+  border-radius: 30px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 26px;
+  display: flow-root;
+  text-align: center;
+  border: 2px solid black;
+  width: 325px;
+  height: 320px;
+  margin-bottom: 10px;
+  background: rgba(122, 42, 86, 0.29);
+  backdrop-filter: blur(15px);
+  color: white;
+  margin: 10px;
+}
+
+
+
+.ListContainer:hover {
+  color: rgb(255, 247, 247);
+  box-shadow: 0 0 10px rgb(104, 43, 86), 0 0 40px rgb(99, 26, 93), 0 0 80px rgb(100, 26, 72);
+}
+
+.ListContainer img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+ background-color: rgb(247, 247, 247);
+  padding: 12px;
+  margin-right: 10px;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgb(139, 59, 115), 0 0 40px red, 0 0 80px red;
+
+}
+
+.anuncio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.anuncio-container {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.anuncio-content {
+  text-align: center;
+}
+
+.anuncio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.anuncio-buttons button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.anuncio-buttons button:first-child {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.anuncio-buttons button:last-child {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.close-button i {
+  font-size: 20px;
+}
+
+
+.close-button:hover {
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+
+.custom-button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.custom-button:hover {
+  background-color: #45a049;
+}
+
+.custom-button:active {
+  background-color: #367637;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/*este es el modal del user register*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 12;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.modal.show {
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 540px;
+  width: 650px;
+  color: white;
+  margin: auto;
+  border-radius: 30px;
+  margin-bottom: 70px;
+  background: rgba(201, 51, 168, 0.29);
+  backdrop-filter: blur(11px);
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.modal.show .modal-content {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+
+.modal .modal-content {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+/*modal de actualizar datos*/
+
+.update-overlay {
+  font-family: 'Courier New', Courier, monospace;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Confirm-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.update {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.update-container {
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 540px;
+  width: 580px;
+  color: white;
+  margin: auto;
+  border-radius: 30px;
+  margin-bottom: 70px;
+  background: rgba(105, 34, 70, 0.575);
+  backdrop-filter: blur(20px);
+}
+
+.sumit {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.clear {
+  color: #ffffff;
+  background-color: black;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
